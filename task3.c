@@ -7,20 +7,18 @@ int main()
     int mas[10];
     i = 0;
 
-    // first task
+    // first subtask
     for (i = 0; i < 10; i++)
     {
-        mas[i] = 7;
-        // second task
-        while (mas[5])
+        if (i < 5)
+        {
+            mas[i] = 7;
+        }
+        // second subtask
+        else
         {
             mas[i] = i * i;
-            if (mas[10])
-            {
-                break;
-            }
         }
-
         printf("%d = %d\n", i, mas[i]);
     }
 
