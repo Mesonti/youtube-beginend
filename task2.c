@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int firstFun(int x)
+void firstFun(int x)
 {
     if (x < 10)
     {
-        printf("%d", x);
+        printf("%d\n", x);
     }
     else
     {
-        printf("Error.");
+        printf("Error.\n");
     }
 }
 
@@ -28,9 +28,11 @@ int secondFun(int a, int b)
 
 int main()
 {
+    int t = secondFun(10, 5);
+    
     firstFun(5);
     firstFun(15);
+    firstFun(t);
+    return 0;
 
-    secondFun(firstFun(5), 5);
-    secondFun(firstFun(15), 15);
 }
