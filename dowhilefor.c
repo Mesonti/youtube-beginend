@@ -7,6 +7,7 @@ int main()
     char s[] = {"strokeis\0"};
     char string[] = {"strokeis\0"};
     char string1[] = {"strokeis\0"};
+    char string2[] = {"strokeis\0"};
     int sizeArray = sizeof(string) / sizeof(string[0]);
     char r = '#';
     char s1[8] = {"\0"};
@@ -59,14 +60,35 @@ int main()
         printf("In do-while %s\n", string1);
         string1[a] = r;
         string1[8] = '\0';
-    } while (a == sizeArray);
+    } while (a != 0);
 
     printf("\n");
     printf("Task 3\n");
     for (int q = 0; q < sizeArray; q++)
     {
-        printf(" %c ", string[q]);
+        printf(" %c ", string2[q]);
     }
+    printf("\n");
+    
+    printf("-------------\n");
+    while (a != sizeArray)
+    {
+        printf(" %c ", string2[a]);
+        a++;
+    }
+    printf("\n");
+
+    printf("-------------\n");
+    a = 0;
+    do
+    {
+        printf(" %c ", string2[a]);
+        ++a;
+    } while (a != sizeArray);
+    
+
+    
+
 }
 
 /*  1. Измените цикл for так, чтобы на экран выводились только четные числа от 2 до 18.
