@@ -5,7 +5,9 @@ int main()
 {
     int a = 0;
     char s[] = {"strokeis\0"};
-    int sizeArray = sizeof(s) / sizeof(s[0]);
+    char string[] = {"strokeis\0"};
+    char string1[] = {"strokeis\0"};
+    int sizeArray = sizeof(string) / sizeof(string[0]);
     char r = '#';
     char s1[8] = {"\0"};
     // задача 1
@@ -21,44 +23,49 @@ int main()
     printf("-------------\n");
     while (a != 18)
     {
-        a = a + 2;
+        a += 2;
         printf("While %d\n", a);
     }
 
     printf("-------------\n");
     do
     {
-        a = a - 2;
+        a -= 2;
         printf("Do While %d\n", a);
     } while (a != 0);
 
     printf("\n");
     printf("Task 2\n");
-    // задача 2
-    for (int e = 0; e < 8; e++)
-    {
-        s1[e] += r;
-        s1[8] = 0;
-    }
-    printf("%s\n", s1);
-    printf("\n");
-
     for (int j = 0; j < 8; j++)
     {
-        // printf("Hello\n");
         s[j] = r;
         s[8] = '\0';
         printf("S: %s\n", s);
     }
-    // while (sizeArray < a)
-    // {
-    //     s[]
-    // }
 
-    // задача 3
-    for (int q = 0; q < 8; q++)
+    printf("-------------\n");
+    while (a != sizeArray)
     {
-        printf(" %c ", s[q]);
+        string[a] = r;
+        string[8] = '\0';
+        printf("In while %s\n", string);
+        ++a;
+    }
+
+    printf("-------------\n");
+    do
+    {
+        a--;
+        printf("In do-while %s\n", string1);
+        string1[a] = r;
+        string1[8] = '\0';
+    } while (a == sizeArray);
+
+    printf("\n");
+    printf("Task 3\n");
+    for (int q = 0; q < sizeArray; q++)
+    {
+        printf(" %c ", string[q]);
     }
 }
 
@@ -70,5 +77,4 @@ int main()
 
     3. Отобразите посимвольно на экран строку из задания 2 при помощи любого цикла.
         Это можно сделать зная количество элементов или до символова конца строки.
-
     4. Дополнительно для 2 и 3 задания повторить с двумя другими циклами*/
